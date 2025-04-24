@@ -1,17 +1,17 @@
 import unittest
 from io import StringIO
 from unittest.mock import patch
-from main import main
+from entities.AutoDrivingCarApp import AutoDrivingCarApp
 
 
 class TestUserInteraction(unittest.TestCase):
     def setUp(self):
-        self.maxDiff = None  # Show full diff for long outputs
+        self.app = AutoDrivingCarApp()
 
     def simulate_input_output(self, inputs, expected_outputs):
         with patch('builtins.input', side_effect=inputs):
             with patch('sys.stdout', new_callable=StringIO) as mock_stdout:
-                main()
+                self.app.run()
                 output = mock_stdout.getvalue()
                 for expected in expected_outputs:
                     self.assertIn(expected, output)
@@ -256,7 +256,7 @@ class TestUserInteraction(unittest.TestCase):
 
         expected_outputs = [
             "Welcome to Auto Driving Car Simulation!",
-            "Error: Width and height must be integers",
+            "Error: Please enter correct format",
             "Welcome to Auto Driving Car Simulation!",
             "You have created a field of 10 x 10.",
             "Error: Name cannot be empty",
