@@ -238,14 +238,19 @@ If cars do not have collision, then the system will print the final positions fo
 ## Env setup
 
 ```
+# Download code
+git clone https://github.com/Jacob12138xieyuan/auto-driving-car.git
+cd auto-driving-car
+
 # Create venv 
-python -m venv venv
+python3 -m venv venv
 
 # Activate venv
 source venv/bin/activate
 
 # Install modules
 pip install -e .
+pip install pytest
 
 # Validate installed modules
 pip list
