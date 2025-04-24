@@ -250,6 +250,9 @@ pip install -e .
 # Validate installed modules
 pip list
 
+# Run main program
+python main.py
+
 # Run all test case
 pytest test
 
