@@ -48,12 +48,19 @@ class AutoDrivingCarApp:
                 x, y = int(x), int(y)
                 direction = direction.upper()
                 
+                # Validate direction
                 if direction not in DIRECTIONS:
                     print("Error: Direction must be N, S, E, or W")
                     continue
                     
+                # Validate border
                 if not (0 <= x < self.field.width and 0 <= y < self.field.height):
                     print(f"Error: Position must be within field border (0-{self.field.width-1}, 0-{self.field.height-1})")
+                    continue
+                    
+                # Check if same position with other car
+                if any(car.x == x and car.y == y for car in self.field.cars):
+                    print(f"Error: Position ({x},{y}) is already occupied by another car")
                     continue
                     
                 return x, y, direction
