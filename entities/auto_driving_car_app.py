@@ -1,4 +1,4 @@
-from entities.Field import Field
+from entities.field import Field
 from utils.navigation import DIRECTIONS
 from utils.navigation import DELTA
 from utils.navigation import turn

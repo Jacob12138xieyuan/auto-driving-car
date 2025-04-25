@@ -1,5 +1,5 @@
 import pytest
-from utils.navigation import turn, DIRECTIONS
+from utils.navigation import turn
 
 class TestNavigation:
     @pytest.mark.parametrize("current_dir, command, expected", [

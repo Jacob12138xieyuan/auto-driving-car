@@ -1,5 +1,5 @@
 import pytest
-from entities.Car import Car
+from entities.car import Car
 
 class TestCar:
     @pytest.mark.parametrize("name,x,y,direction,commands", [

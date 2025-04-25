@@ -1,4 +1,4 @@
-from entities.Car import Car
+from entities.car import Car
 
 class Field:
     def __init__(self, width, height):

@@ -1,7 +1,7 @@
 import unittest
 from io import StringIO
 from unittest.mock import patch
-from entities.AutoDrivingCarApp import AutoDrivingCarApp
+from entities.auto_driving_car_app import AutoDrivingCarApp
 
 
 class TestUserInteraction(unittest.TestCase):

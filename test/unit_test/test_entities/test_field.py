@@ -1,6 +1,6 @@
 import pytest
-from entities.Field import Field
-from entities.Car import Car
+from entities.field import Field
+from entities.car import Car
 
 class TestField:
     @pytest.mark.parametrize("width,height", [

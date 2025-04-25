@@ -1,7 +1,7 @@
 import pytest
-from entities.Field import Field
-from entities.Car import Car
-from entities.AutoDrivingCarApp import AutoDrivingCarApp
+from entities.field import Field
+from entities.car import Car
+from entities.auto_driving_car_app import AutoDrivingCarApp
 
 @pytest.fixture
 def app():
